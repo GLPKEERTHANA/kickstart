@@ -1,0 +1,37 @@
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+
+t=int(input())
+for z in range(t):
+    n=int(input())
+    ans=''
+    len1=0
+    for i in range(n):
+        s=input()
+        p=len(set(s))
+        set1=set(s)
+        if ' ' in set1:
+            set1.remove(' ')
+        p=len(set1)
+        #print(set(s))
+        if(p>=len1):
+            #print(p)
+            #print(len1)
+            if(p==len1):
+                #print(ans,s)
+                if(ans>s):
+                    #print(ans,s)
+                    ans=s
+                #ans=str(sorted(ans, s)[0])
+            else:
+                len1=p
+                ans=s
+            #print(ans)
+    print("Case #",z+1,": ",end="",sep="")
+    print(ans)
+
